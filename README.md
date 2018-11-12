@@ -14,8 +14,8 @@ An application that allows users to read and rate books. Kinda sorta like [Goodr
 5 different classes separated into files:
 
 * TomeRater.py - includes methods for User and Book classes to interact
-* User.py 
-* Book.py 
+* User.py - includes a method of users with their average rating of books they read 
+* Book.py - includes a method of books with their average rating by overall users 
 * NonFiction.py - subclass of Book
 * Fiction.py - subclass of Book
 
