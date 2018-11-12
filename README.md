@@ -20,5 +20,4 @@ An application that allows users to read and rate books. Kinda sorta like [Goodr
 * Fiction.py - subclass of Book
 
 ## Course direction
-Programming with Python
-Codecademy Pro
+Programming with Python, Codecademy Pro (Aug 28 - Nov 12, 2018 cohort)
