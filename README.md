@@ -1,6 +1,6 @@
 # TomeRater
 
-An application that allows users to read and rate books.
+An application that allows users to read and rate books. Kinda sorta like [Goodreads](https://www.goodreads.com/user/show/18346324-mona).
 
 ## Project Goals
 1. practice implementing and testing classes in Python
@@ -9,15 +9,15 @@ An application that allows users to read and rate books.
 
 ## Folder structure
 
-main.py (code for testing)
+* main.py (code for testing)
 
 5 different classes separated into files:
 
-TomeRater.py - includes methods for User and Book classes to interact
-User.py 
-Book.py 
-NonFiction.py - subclass of Book
-Fiction.py - subclass of Book
+* TomeRater.py - includes methods for User and Book classes to interact
+* User.py 
+* Book.py 
+* NonFiction.py - subclass of Book
+* Fiction.py - subclass of Book
 
 ## Course direction
 Programming with Python
