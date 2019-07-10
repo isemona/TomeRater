@@ -15,11 +15,10 @@ class User:
 
     def __repr__(self):
         return "User {name}, email: {email}, books read: {number}".format(name = self.name, email = self.email, number = len(self.books))
-    
 
     def __eq__(self, other_name):
-    	if isinstance(other, User):
-    		return self.name == other_name
+    	if isinstance(other_name, User):
+    		return self.name == other_name.name
     	return False
 
     # this part makes User and Books interact through TomeRater	
@@ -27,11 +26,5 @@ class User:
       self.books[book] = rating
     
     def get_average_rating(self): 
-        average = 0
-        sum = 0
-        for value in self.books.values(): 
-            if value:
-                sum += value
-
-        average = sum/len(self.books) # length of self.book dictionary
+        average = sum(self.books.values())/len(self.books) # length of self.book dictionary
         return average

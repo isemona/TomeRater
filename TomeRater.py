@@ -12,7 +12,7 @@ class TomeRater():
         return Book(title,isbn)
 
     def create_novel(self, title, author, isbn):
-        return Fiction(title, author, isbn)
+        return Fiction(title, isbn, author)
 	
     def create_non_fiction(self, title, subject, level, isbn):
         return NonFiction(title, subject, level, isbn)
@@ -20,14 +20,14 @@ class TomeRater():
     def add_book_to_user(self, book, email, rating=None):
         for key,user in self.users.items():
             if user.email == email:
-                user.read_book(book, rating) 
+                user.read_book(book,rating) 
                 book.add_rating(rating) 
                 if book not in self.books:
                     self.books[book] = 1
                 else:
                     self.books[book] += 1
                 return user # is equivalent to get, know what the method returns
-        print("No user with email {email}!".format(email = self.email))
+        print("No user with email {email}!".format(email = email))
 	
     def add_user(self, name, email, user_books=None):
         self.users[email] = User(name,email)

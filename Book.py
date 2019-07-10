@@ -1,39 +1,34 @@
 from User import User
 
-
 class Book:
     def __init__(self, title, isbn):
         self.title = title
         self.isbn = isbn
         self.ratings = []  # all users start with 0 input
 
-    def get_title(self, title):
+    def get_title(self):
         return self.title
 
-    def get_isbn(self, isbn):
+    def get_isbn(self):
         return self.isbn
 
     def set_isbn(self, isbn):
-        print("This book's ISBN has been updated.")
+        self.isbn = isbn
+        # print("This book's ISBN has been updated.")
 
     def add_rating(self, rating):
         if rating and (0 <= rating) and (rating <= 4):
             self.ratings.append(rating)
         else:
-            print("Invalid Rating")
+            print("Invalid Rating") # expected behavior for when users are added with books 
 
     def __eq__(self, other_book):
         if isinstance(other_book, Book):
-            return self.book == other_book
+            return self.title == other_book.title # check against other_book.title
         return False
 
     def get_average_rating(self):  
-        average = 0
-        sum = 0
-        for val in self.ratings:
-            sum += val
-        
-        average = sum / len(self.ratings)  # iterates through values in self.ratings of Book()
+        average = sum(self.ratings) / len(self.ratings)  # iterates through values in self.ratings of Book()
         return average
 
     def __hash__(self):
