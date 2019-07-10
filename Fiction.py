@@ -1,5 +1,3 @@
-# import Book - don't import book here Book is not a module it is a class
-
 from Book import Book as Parent 
 
 class Fiction(Parent):
